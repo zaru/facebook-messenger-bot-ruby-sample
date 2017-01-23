@@ -15,7 +15,7 @@ class App < Sinatra::Base
   end
 
   get "/callback" do
-    if "subscribe" == params["hub.mode"] && "zaru_is_zaru_verify_token" == params["hub.verify_token"]
+    if "subscribe" == params["hub.mode"] && ENV["VERIFY_TOKEN"] == params["hub.verify_token"]
       params["hub.challenge"]
     end
   end
