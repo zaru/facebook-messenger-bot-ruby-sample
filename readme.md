@@ -4,10 +4,10 @@
 
 ```
 $ bundle install
-$ API_TOKEN=<TOKEN> bundle exec puma --config config/puma.rb -d
+$ VERIFY_TOKEN=<VERIFY_TOKEN> API_TOKEN=<TOKEN> bundle exec puma --config config/puma.rb -d
 ```
 
 ```
-$ API_TOKEN=<TOKEN> bundle exec pumactl halt
-$ API_TOKEN=<TOKEN> bundle exec pumactl restart
+$ VERIFY_TOKEN=<VERIFY_TOKEN> API_TOKEN=<TOKEN> bundle exec pumactl halt
+$ VERIFY_TOKEN=<VERIFY_TOKEN> API_TOKEN=<TOKEN> bundle exec pumactl restart
 ```
